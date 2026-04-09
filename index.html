@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameAppCeLu Hub | Video Game Design Studio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Official hub for GameAppCeLu Video Game Design Studio. Discover, explore, and upload the latest game links and architectural schematics.">
+    <meta name="keywords" content="GameAppCeLu, Game Hub, Video Game Design, Indie Games, Mutant City">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    
+    <header id="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i data-lucide="gamepad-2"></i>
+                <span class="logo-text">GameAppCeLu <small>Studio</small></span>
+            </div>
+            <div class="nav-links">
+                <a href="#games" class="nav-link">Juegos</a>
+                <a href="#upload" class="nav-link">Subir Link</a>
+                <button id="theme-toggle" class="icon-btn">
+                    <i data-lucide="moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Nexus of <span class="gradient-text">Creativity</span></h1>
+                    <p class="hero-subtitle">El cuartel general de GameAppCeLu Video Game Design Studio. Explora nuestras últimas creaciones o comparte un nuevo desafío.</p>
+                    <div class="hero-actions">
+                        <a href="#games" class="btn btn-primary">Ver Juegos</a>
+                        <button id="open-upload" class="btn btn-secondary">Subir Nuevo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="games-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestras Creaciones</h2>
+                    <div class="search-box">
+                        <i data-lucide="search"></i>
+                        <input type="text" id="game-search" placeholder="Buscar juegos...">
+                    </div>
+                </div>
+                
+                <div id="game-grid" class="game-grid">
+                    <!-- Games will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Upload Modal -->
+    <div id="upload-modal" class="modal">
+        <div class="modal-content glass">
+            <div class="modal-header">
+                <h3>Subir Nuevo Juego</h3>
+                <button class="close-modal"><i data-lucide="x"></i></button>
+            </div>
+            <form id="upload-form">
+                <div class="input-group">
+                    <label for="game-title">Título del Juego</label>
+                    <input type="text" id="game-title" placeholder="Ej: Mutant City" required>
+                </div>
+                <div class="input-group">
+                    <label for="game-url">Enlace del Juego</label>
+                    <input type="url" id="game-url" placeholder="https://..." required>
+                </div>
+                <div class="input-group">
+                    <label for="game-thumb">URL de la Imagen (Opcional)</label>
+                    <input type="url" id="game-thumb" placeholder="https://..." >
+                </div>
+                <div class="input-group">
+                    <label for="game-desc">Descripción</label>
+                    <textarea id="game-desc" rows="3" placeholder="Breve descripción del juego..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Publicar Enlace</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>GameAppCeLu</h3>
+                    <p>Diseñando el futuro de los videojuegos.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Studio</h4>
+                    <ul>
+                        <li><a href="#">Proyectos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GameAppCeLu Video Game Design Studio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
