@@ -19,16 +19,34 @@ const DEFAULT_GAMES = [
 ];
 
 let games = JSON.parse(localStorage.getItem('gameappcelu_games')) || DEFAULT_GAMES;
+let isLoggedIn = localStorage.getItem('gameappcelu_admin') === 'true';
 
 // DOM Elements
 const gameGrid = document.getElementById('game-grid');
 const uploadModal = document.getElementById('upload-modal');
+const modalTitle = document.getElementById('modal-title');
+const loginView = document.getElementById('login-view');
+const uploadView = document.getElementById('upload-view');
 const openUploadBtn = document.getElementById('open-upload');
 const closeModalBtn = document.querySelector('.close-modal');
+const loginForm = document.getElementById('login-form');
 const uploadForm = document.getElementById('upload-form');
+const logoutBtn = document.getElementById('admin-logout');
 const searchInput = document.getElementById('game-search');
 
 // Functions
+function updateModalView() {
+    if (isLoggedIn) {
+        modalTitle.textContent = 'Subir Nuevo Juego';
+        loginView.classList.add('hidden');
+        uploadView.classList.remove('hidden');
+    } else {
+        modalTitle.textContent = 'Acceso de Administrador';
+        loginView.classList.remove('hidden');
+        uploadView.classList.add('hidden');
+    }
+}
+
 function renderGames(filterTerm = '') {
     const filteredGames = games.filter(game => 
         game.title.toLowerCase().includes(filterTerm.toLowerCase()) ||
@@ -60,6 +78,7 @@ function saveGames() {
 
 // Event Listeners
 openUploadBtn.addEventListener('click', () => {
+    updateModalView();
     uploadModal.classList.add('active');
 });
 
@@ -72,6 +91,35 @@ window.addEventListener('click', (e) => {
     if (e.target === uploadModal) {
         uploadModal.classList.remove('active');
     }
+});
+
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const user = document.getElementById('admin-user').value;
+    const pass = document.getElementById('admin-pass').value;
+
+    if (user === 'admin' && pass === 'admin1231') {
+        isLoggedIn = true;
+        localStorage.setItem('gameappcelu_admin', 'true');
+        updateModalView();
+        // Feedback visual simple
+        const btn = loginForm.querySelector('button');
+        btn.textContent = '¡Acceso Concedido!';
+        btn.style.background = '#22c55e';
+        setTimeout(() => {
+            btn.textContent = 'Verificar Identidad';
+            btn.style.background = '';
+        }, 2000);
+    } else {
+        alert('Credenciales incorrectas');
+    }
+});
+
+logoutBtn.addEventListener('click', () => {
+    isLoggedIn = false;
+    localStorage.removeItem('gameappcelu_admin');
+    updateModalView();
+    uploadModal.classList.remove('active');
 });
 
 uploadForm.addEventListener('submit', (e) => {
