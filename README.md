@@ -1,1 +1,1 @@
-link :  https://cute-gaufre-a621fb.netlify.app
+link :  https://gameappcelu.netlify.app/
