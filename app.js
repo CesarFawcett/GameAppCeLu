@@ -3,18 +3,11 @@
 // Initial State
 const DEFAULT_GAMES = [
     {
-        id: 'mutant-city',
-        title: 'Mutant City',
-        desc: 'Un mundo post-apocalíptico donde la supervivencia es el único objetivo. Explora las ruinas de la civilización.',
-        url: 'https://mutancyti.example.com',
-        thumb: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-        id: 'neon-runner',
-        title: 'Neon Runner',
-        desc: 'Velocidad y reflejos en una ciudad futurista. Corre contra el tiempo y los obstáculos cibernéticos.',
-        url: 'https://neonrunner.example.com',
-        thumb: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800'
+        id: 'card-battle-universe',
+        title: 'CARD BATTLE UNIVERSE',
+        desc: 'Card Battle Universe es un juego de duelos de cartas coleccionables, El proyecto integra mecanicas de combate en tiempo real, un sistema de progresion en modo historia.',
+        url: 'https://gameappcelu.itch.io/card-battle-universe',
+        thumb: 'assets/card-battle-universe.png'
     }
 ];
 
