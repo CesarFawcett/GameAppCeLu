@@ -12,7 +12,7 @@ Accede a la versión en vivo: **[gameappcelu.netlify.app](https://gameappcelu.ne
 ---
 
 ## 🚀 Sobre el Proyecto
-**GameAppCeLu Hub** es una plataforma web de vanguardia diseñada para centralizar y compartir los proyectos de videojuegos del estudio. Con una estética futurista y de alto rendimiento, el portal sirve como puente entre los creadores y los jugadores, ofreciendo un acceso directo a experiencias como **Card Battle Universe**.
+**GameAppCeLu Hub** es una plataforma web de vanguardia diseñada para centralizar y compartir los proyectos de videojuegos del estudio. Con una estética futurista y de alto rendimiento, el portal sirve como puente entre los creadores y los jugadores, ofreciendo un acceso directo a experiencias como **Card Battle Universe** y el clásico **Buscamina**.
 
 ### ✨ Características Principales
 - 🌑 **Estética Modern-Dark**: Interfaz de alta fidelidad con efectos de glassmorphism y acentos neón.

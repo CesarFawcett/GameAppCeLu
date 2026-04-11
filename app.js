@@ -1,6 +1,5 @@
 // GameAppCeLu Hub - Logic Engine
 
-// Initial State
 const DEFAULT_GAMES = [
     {
         id: 'card-battle-universe',
@@ -8,6 +7,13 @@ const DEFAULT_GAMES = [
         desc: 'Card Battle Universe es un juego de duelos de cartas coleccionables, El proyecto integra mecanicas de combate en tiempo real, un sistema de progresion en modo historia.',
         url: 'https://gameappcelu.itch.io/card-battle-universe',
         thumb: 'assets/card-battle-universe.png'
+    },
+    {
+        id: 'buscamina',
+        title: 'Buscamina',
+        desc: 'Juego basado en buscamina, para distraerte un rato.',
+        url: '#',
+        thumb: 'assets/buscamina.png'
     }
 ];
 
